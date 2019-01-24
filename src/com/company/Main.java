@@ -16,7 +16,7 @@ import java.util.Scanner;
  * Bonus Bonus:
  * Modify the algorithm to allow the user who receives the A to designate it either as 1 or 11.
  * <p>
- * Objective
+ * <h3>Objective</h3>
  * Define the problem by constructing an algorithm using pseudocode
  * What control structures (sequence, selection and repetition) are required?
  * What variables are required?
@@ -47,20 +47,16 @@ public class Main {
             }
         }
         System.out.println("Good Bye");
-        System.out.println('a' / 2);
     }
 
     public static int getNumber(String str) {
         if (str.equalsIgnoreCase("J") || str.equalsIgnoreCase("Q") || str.equalsIgnoreCase("K")) {
             return 10;
         } else if (str.equalsIgnoreCase("A")) {
-            int choice = 1 + (int) (Math.random() * 2);
-            switch (choice) {
-                case 1:
-                    return 1;
-                case 2:
-                    return 11;
-            }
+            Scanner keyboard = new Scanner(System.in);
+            System.out.print("Enter 1 or 11 number: ");
+            int a = keyboard.nextInt();
+            return a;
         }
         return Integer.parseInt(str);
     }
